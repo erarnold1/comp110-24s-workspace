@@ -2,9 +2,9 @@
 __author__ = "730469865"
 
 
+import random
 from turtle import Turtle, colormode, done, tracer, update
 colormode(255)
-import random
 
 
 def main() -> None:
@@ -23,19 +23,19 @@ def main() -> None:
     balls: Turtle = Turtle()
     balls.speed(0)
     x = range(5)
-    for n in x: # upper level
-        draw_circle(balls, random.randint(-40, 30), random.randint(180, 230), random.randint(5,10))
+    for n in x:  # upper level
+        draw_circle(balls, random.randint(-40, 30), random.randint(180, 230), random.randint(5, 10))
     x = range(8)
-    for n in x: # second level
-        draw_circle(balls, random.randint(-60, 70), random.randint(100, 180), random.randint(5,10))
+    for n in x:  # second level
+        draw_circle(balls, random.randint(-60, 70), random.randint(100, 180), random.randint(5, 10))
     x = range(10)
-    for n in x: # third level
+    for n in x:  # third level
         draw_circle(balls, random.randint(-100, 90), random.randint(0, 100), random.randint(5, 10))
     x = range(12)
-    for n in x: # fourth level
+    for n in x:  # fourth level
         draw_circle(balls, random.randint(-140, 130), random.randint(-120, 0), random.randint(5, 10))
     x = range(12)
-    for n in x: # fifth level
+    for n in x:  # fifth level
         draw_circle(balls, random.randint(-165, 175), random.randint(-220, -120), random.randint(5, 10))
     # draw the presents and tree stump
     box: Turtle = Turtle()
@@ -47,13 +47,13 @@ def main() -> None:
     draw_square(box, -14, -228, 30, "brown")
     draw_star(star, -160, -190, 50)
     draw_star(star, 170, -190, 50)
-    #draw the star
+    # draw the star
     draw_star(star, -58, 310, 100)
     done()
 
 
 def draw_triangle(turtle: Turtle, x: int, y: int, leg_length: int, base_length: int) -> None:
-    """This function draws an isosceles triangle. User will input the location and length of legs and base."""
+    """Draws an isosceles triangle. User will input the location and length of legs and base."""
     turtle.hideturtle()
     turtle.color(56, 163, 62)
     turtle.penup()
@@ -71,7 +71,7 @@ def draw_triangle(turtle: Turtle, x: int, y: int, leg_length: int, base_length: 
 
 
 def draw_circle(turtle: Turtle, x: int, y: int, rad: int) -> None:
-    """This function draws a circle. User will input the location and desired radius."""
+    """Draws a circle. User will input the location and desired radius."""
     turtle.hideturtle()
     turtle.color(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
     turtle.penup()
@@ -83,8 +83,8 @@ def draw_circle(turtle: Turtle, x: int, y: int, rad: int) -> None:
     turtle.end_fill()
 
 
-def draw_star(turtle: Turtle, x: int, y:int, side_length: int) -> None:
-    """This is a recursive function that draws a star. The function draws the star smaller and smaller to create a cool pattern."""
+def draw_star(turtle: Turtle, x: int, y: int, side_length: float) -> None:
+    """Draws a recursive star to create a cool pattern."""
     turtle.hideturtle()
     turtle.penup()
     turtle.goto(x, y)
@@ -100,8 +100,8 @@ def draw_star(turtle: Turtle, x: int, y:int, side_length: int) -> None:
     turtle.end_fill()
 
 
-def draw_square(turtle: Turtle, x: int, y:int, width: int, color: str) -> None:
-    """This function draws a square. The user inputs the location, width and color they want the square to be."""
+def draw_square(turtle: Turtle, x: int, y: int, width: int, color: str) -> None:
+    """Draws a square. The user inputs the location, width and color they want the square to be."""
     turtle.hideturtle()
     turtle.penup()
     turtle.goto(x, y)
